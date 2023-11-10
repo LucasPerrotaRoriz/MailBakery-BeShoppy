@@ -32,109 +32,103 @@
         :root {
 			color-scheme: light dark;
 			supported-color-schemes: light dark;
-		  }
-  
+		}
+
 		  /* What it does: Remove spaces around the email design added by some email clients. */
 		  /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-		  html,
-		  body {
-			  margin: 0 auto !important;
-			  padding: 0 !important;
-			  height: 100% !important;
-			  width: 100% !important;
-		  }
-  
-		  /* What it does: Stops email clients resizing small text. */
-		  * {
-			  -ms-text-size-adjust: 100%;
-			  -webkit-text-size-adjust: 100%;
-		  }
-  
-		  /* What it does: Centers email on Android 4.4 */
-		  div[style*="margin: 16px 0"] {
-			  margin: 0 !important;
-		  }
-  
-		  /* What it does: forces Samsung Android mail clients to use the entire viewport */
-		  #MessageViewBody, #MessageWebViewDiv{
-			  width: 100% !important;
-		  }
+		html,
+		body {
+			margin: 0 auto !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
 
-		  h1, h2, h3 {
-			font-weight: normal !important;
-			margin: 0 !important;
-		  }
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
 
-		  p {
+		/* What it does: Centers email on Android 4.4 */
+		div[style*="margin: 16px 0"] {
 			margin: 0 !important;
-		  }
-  
-		  /* What it does: Stops Outlook from adding extra spacing to tables. */
-		  table,
-		  td {
-			  mso-table-lspace: 0pt !important;
-			  mso-table-rspace: 0pt !important;
-		  }
-  
-		  /* What it does: Replaces default bold style. */
-		  th {
-			  font-weight: normal;
-		  }
-  
-		  /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-		  a {
-			  text-decoration: none;
-		  }
-  
-		  /* What it does: Uses a better rendering method when resizing images in IE. */
-		  img {
-			  -ms-interpolation-mode:bicubic;
-		  }
-  
-		  /* What it does: A work-around for email clients meddling in triggered links. */
-		  a[x-apple-data-detectors],  /* iOS */
-		  .unstyle-auto-detected-links a,
-		  .aBn {
-			  border-bottom: 0 !important;
-			  cursor: default !important;
-			  color: inherit !important;
-			  text-decoration: none !important;
-			  font-size: inherit !important;
-			  font-family: inherit !important;
-			  font-weight: inherit !important;
-			  line-height: inherit !important;
-		  }
-  
-		  /* What it does: Prevents Gmail from changing the text color in conversation threads. */
-		  .im {
-			  color: inherit !important;
-		  }
-  
-		  /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-		  .a6S {
-			 display: none !important;
-			 opacity: 0.01 !important;
-		  }
-		  /* If the above doesn't work, add a .g-img class to any image in question. */
-		  img.g-img + div {
-			 display: none !important;
-		  }
-  
-		  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-		  /* Create one of these media queries for each additional viewport size you'd like to fix */
-  
+		}
+
+		/* What it does: forces Samsung Android mail clients to use the entire viewport */
+		#MessageViewBody, #MessageWebViewDiv{
+			width: 100% !important;
+		}
+
+		h1, h2, h3, h4 {
+		font-weight: normal !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		}
+
+		p {
+		margin: 0 !important;
+		padding: 0 !important;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Replaces default bold style. */
+		th {
+			font-weight: normal;
+		}
+
+		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+		a {
+			text-decoration: none;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode:bicubic;
+		}
+
+		/* What it does: A work-around for email clients meddling in triggered links. */
+		a[x-apple-data-detectors],  /* iOS */
+		.unstyle-auto-detected-links a,
+		.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+		.im {
+			color: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+		.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+		}
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img + div {
+			display: none !important;
+		}
+
+		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+		/* Create one of these media queries for each additional viewport size you'd like to fix */
+
 		.mcnPreviewText { display: none !important; }
-		
 		
 		/* Mobile styles */
 		@media only screen and (max-device-width:480px), only screen and (max-width:480px) {
-			.mobile-size-1 {
-				max-width: 480px !important;
-				
-				background-size: cover !important;
-				object-fit: cover !important;
-			}
-			
 			.mobile-shell { width: 100% !important; min-width: 100% !important; }
 			
 			.m-center { text-align: center !important; }
@@ -149,7 +143,7 @@
 			.m-hide { 
 				display: none !important; 
 				width: 0 !important;
-			 	height: 0 !important; 
+				height: 0 !important; 
 				font-size: 0 !important; 
 				line-height: 0 !important; 
 				min-height: 0 !important; 
@@ -178,11 +172,11 @@
 
 			.p30-15-0 { padding: 30px 15px 0px 15px !important; }
 
-			.pt-30 { padding-top: 30px; }
+			.pt-30 { padding-top: 30px !important;}
 
 			.pb-30 { padding-bottom: 30px !important; }
 
-			.pb-30-0 { padding: 30px 0px !important; }
+			.p30-0 { padding: 30px 0px !important; }
 			
 			.nopt { padding-top: 0px !important; }
 
@@ -192,17 +186,11 @@
 
 			.content { padding: 30px 15px !important; }
 
-			.bt150 { border-top: 30px solid #ffffff !important; }
+			.bt30 { border-top: 30px solid #ffffff !important; }
 
-			.entry { padding-bottom: 30px !important; }
+			.pb0 { padding-bottom: 0px !important; }
 
-			.pb60m { padding-bottom: 0px !important; }
-
-			.separator { padding-top: 30px !important; }
-			
 			.box { padding: 30px 15px !important; }
-
-			.box2 { padding: 30px 15px !important; }
 
 			.pb60 { padding-bottom: 30px !important; }
 
@@ -254,6 +242,109 @@
 	</style>
 </head>
 <body class="body" style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#1d1d1d; -webkit-text-size-adjust:none;">
-	
+	<!-- Email Body: BEGIN -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#1D1D1D">
+		<tr>
+			<td align="center" valign="top">
+				<!-- Header : BEGIN -->
+					<!-- Top Header : BEGIN -->
+					<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#282828">
+						<tr>
+							<td align="center" class="p30-15" style="padding: 12px 0 12px 0;">
+								<!-- Table 650px : BEGIN -->
+								<table cellpadding="0" cellspacing="0" border="0" width="650" class="mobile-shell">
+									<tr>
+										<td class="td" style="min-width: 650px; width: 650px; font-size: 0pt; font-weight: normal; line-height: 0pt; padding: 0; margin: 0;
+										Margin: 0">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<!-- Left Column : BEGIN -->
+													<th class="column-top" width="325" style="font-size: 0pt; line-height: 0pt; font-weight: normal;  margin: 0; padding: 0; Margin: 0; vertical-align: top;">
+														<table cellpadding="0" cellspacing="0" border="0" width="100%">
+															<tr>
+																<td align="left">
+																	<table class="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
+																		<tr>
+																			<td class="img" width="20" style="font-size: 0pt; line-height: 0pt; text-align: left;">
+																				<img src="https://github.com/LucasPerrotaRoriz/MailBakery-BeShoppy/blob/main/images/small_sep.jpg?raw=true" width="15" height="1" border="0" alt="">
+																			</td>
+																			<td class="m-center" style="font-family: 'Raleway', Arial, sans-serif; font-size: 12px; line-height: 12px; color: #979797; text-align: left;">
+																				<span>
+																					free shipping on all orders
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</th>
+													<!-- Left Column : END -->
+
+													<!-- Column Spacer : BEGIN -->
+													<th class="column-empty" width="1" style="font-size: 0pt; line-height: 0pt; margin: 0; padding: 0; font-weight: normal;"></th>
+													<!-- Column Spacer : END -->
+
+													<!-- Right Column : BEGIN -->
+													<th class="column" width="325" style="font-size: 0pt; line-height: 0pt; font-weight: normal;  margin: 0; padding: 0; Margin: 0;">
+														<table cellpadding="0" cellspacing="0" border="0" width="100%">
+															<tr>
+																<td align="right">
+																	<table class="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center;">
+																		<tr>
+																			<td class="img" width="20" style="font-size: 0pt; line-height: 0pt; text-align: left;">
+																				<img src="https://github.com/LucasPerrotaRoriz/MailBakery-BeShoppy/blob/main/images/small_sep.jpg?raw=true" width="15" height="1" border="0" alt="">
+																			</td>
+																			<td style="font-family: 'Raleway', Arial, sans-serif; font-size: 12px; line-height: 12px; color: #979797; text-align: left;">
+																				<span>
+																					<a href="#" target="_blank" style="color: #979797; text-decoration: none;">
+																						<span style="color: #979797; text-decoration: none;">
+																							web view
+																						</span>
+																					</a>
+																				</span>
+																			</td>
+
+																			<!-- Column Spacer : BEGIN -->
+																			<td width="20" style="font-size: 0pt; line-height: 0pt; text-align: left;"></td>
+																			<!-- Column Spacer : END -->
+
+																			<td class="img" width="20" style="font-size: 0pt; line-height: 0pt; text-align: left;">
+																				<img src="https://github.com/LucasPerrotaRoriz/MailBakery-BeShoppy/blob/main/images/small_sep.jpg?raw=true" width="15" height="1" border="0" alt="">
+																			</td>
+																			<td style="font-family: 'Raleway', Arial, sans-serif; font-size: 12px; line-height: 12px; color: #979797; text-align: left;">
+																				<span>
+																					<a href="#" target="_blank" style="color: #979797; text-decoration: none;">
+																						<span style="color: #979797; text-decoration: none;">
+																							forward
+																						</span>
+																					</a>
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</th>
+													<!-- Right Column : END -->
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<!-- Table 650px : END -->
+							</td>
+						</tr>
+					</table>
+					<!-- Top Header : END -->
+
+		
+
+				<!-- Header : END -->
+			</td>
+		</tr>
+	</table>
+	<!-- Email Body : END -->
 </body>
 </html>
